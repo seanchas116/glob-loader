@@ -19,5 +19,8 @@
   "dependencies": {
     "glob": "^5.0.10",
     "loader-utils": "^0.2.9"
+  },
+  "devDependencies": {
+    "webpack": "^1.9.10"
   }
 }

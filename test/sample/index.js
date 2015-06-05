@@ -1,2 +1,2 @@
 
-require("glob-loader!./dir.pattern");
+require("./dir.pattern");
