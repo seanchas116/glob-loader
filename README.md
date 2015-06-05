@@ -1,6 +1,8 @@
 # glob-loader [![npm version](https://badge.fury.io/js/glob-loader.svg)](http://badge.fury.io/js/glob-loader)
 webpack loader to load files at once with glob
 
+[![Build Status](https://travis-ci.org/seanchas116/glob-loader.svg?branch=master)](https://travis-ci.org/seanchas116/glob-loader)
+
 ## Install
 
 ```
