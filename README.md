@@ -17,7 +17,7 @@ npm install --save-dev glob-loader
 
 ### `dir.pattern` file
 
-Pattern is relative to the file.
+Pattern is relative to the file directory.
 
 ```
 ./dir/**/*.js
