@@ -1,4 +1,4 @@
-# glob-loader
+# glob-loader [![npm version](https://badge.fury.io/js/glob-loader.svg)](http://badge.fury.io/js/glob-loader)
 webpack loader to load files at once with glob
 
 ## Install
