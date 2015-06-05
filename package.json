@@ -1,6 +1,6 @@
 {
   "name": "glob-loader",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "webpack loader to load files at once with glob",
   "main": "index.js",
   "scripts": {
