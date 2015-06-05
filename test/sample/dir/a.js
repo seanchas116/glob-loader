@@ -1,1 +1,1 @@
-require("../loaded").push("a");
+global.loaded.push("a");

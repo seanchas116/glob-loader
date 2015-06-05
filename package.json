@@ -4,7 +4,8 @@
   "description": "webpack loader to load files at once with glob",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "pretest": "webpack --config ./test/sample/webpack.config.js",
+    "test": "tap test/test.js"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,7 @@
     "loader-utils": "^0.2.9"
   },
   "devDependencies": {
+    "tap": "^1.2.0",
     "webpack": "^1.9.10"
   }
 }
