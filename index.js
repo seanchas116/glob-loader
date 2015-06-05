@@ -5,10 +5,8 @@ var glob = require("glob");
 var path = require("path");
 
 module.exports = function (content, sourceMap) {
-  var query = loaderUtils.parseQuery(this.query);
-  var pattern = query.pattern;
-
-  var files = glob.sync(pattern);
+  // var query = loaderUtils.parseQuery(this.query);
+  var files = glob.sync(content.trim());
 
   return files.map(function (file) {
     var relativePath = path.relative(process.cwd(), file);
