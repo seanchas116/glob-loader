@@ -21,6 +21,11 @@
     "glob": "^5.0.10",
     "loader-utils": "^0.2.9"
   },
+  "keywords": [
+    "webpack",
+    "loader",
+    "glob"
+  ],
   "devDependencies": {
     "tap": "^1.2.0",
     "webpack": "^1.9.10"
