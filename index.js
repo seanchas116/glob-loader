@@ -12,6 +12,6 @@ module.exports = function (content, sourceMap) {
   });
 
   return files.map(function (file) {
-    return "require(" + JSON.stringify(file) + ");";
-  }).join("\n");
+    return "require(" + JSON.stringify(file) + ");\n";
+  }).join("");
 };
