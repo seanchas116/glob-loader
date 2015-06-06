@@ -12,7 +12,6 @@ module.exports = function (content, sourceMap) {
   });
 
   return files.map(function (file) {
-    var relativePath = path.relative(resourceDir, file);
     return "require(" + JSON.stringify(file) + ");";
   }).join("\n");
 };
