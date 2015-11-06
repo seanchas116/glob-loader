@@ -1,7 +1,7 @@
 var test = require("tap").test;
-require("./sample/bundle");
+var testBundle = require("./sample/bundle");
 
 test("glob-loader", function (t) {
-  t.similar(global.loaded, ["a", "b"]);
+  t.similar(testBundle, ["a", "b"]);
   t.end()
 });
