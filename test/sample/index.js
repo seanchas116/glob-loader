@@ -1,3 +1,1 @@
-
-global.loaded = [];
-require("./dir.pattern");
+module.exports = require("./dir.pattern");

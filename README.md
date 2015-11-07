@@ -26,10 +26,9 @@ Pattern is relative to the file directory.
 ### Require patterns
 
 ```js
-require("glob-loader!./dir.pattern");
+var modules = require("glob-loader!./dir.pattern");
 ```
 
 ## TODO
 
-* export required values
 * source map

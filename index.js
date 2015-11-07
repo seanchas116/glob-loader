@@ -11,7 +11,7 @@ module.exports = function (content, sourceMap) {
     cwd: resourceDir
   });
 
-  return files.map(function (file) {
-    return "require(" + JSON.stringify(file) + ");\n";
-  }).join("");
+  return "module.exports = [\n" + files.map(function (file) {
+    return "  require(" + JSON.stringify(file) + ")"
+  }).join(",\n") + "\n];"
 };

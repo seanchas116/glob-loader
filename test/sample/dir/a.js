@@ -1,1 +1,1 @@
-global.loaded.push("a");
+module.exports = "a";
