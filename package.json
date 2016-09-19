@@ -19,7 +19,6 @@
   "homepage": "https://github.com/seanchas116/glob-loader#readme",
   "dependencies": {
     "glob": "^5.0.10",
-    "loader-utils": "^0.2.9"
   },
   "keywords": [
     "webpack",
