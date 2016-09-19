@@ -17,8 +17,9 @@
     "url": "https://github.com/seanchas116/glob-loader/issues"
   },
   "homepage": "https://github.com/seanchas116/glob-loader#readme",
-  "dependencies": {
-    "glob": "^5.0.10",
+  "dependencies": {},
+  "peerDependencies": {
+    "glob": "*"
   },
   "keywords": [
     "webpack",
@@ -27,6 +28,7 @@
   ],
   "devDependencies": {
     "tap": "^1.2.0",
+    "glob": "^7.0.5",
     "webpack": "^1.9.10"
   }
 }
