@@ -7,16 +7,16 @@ module.exports = function (content, sourceMap) {
   var resourceDir = path.dirname(this.resourcePath);
   var pattern = content.trim();
   var files = glob.sync(pattern, {
-    cwd: resourceDir,
-    realpath: true
+    cwd: resourceDir
   });
 
   if (!files.length) {
     this.emitWarning('Did not find anything for glob "' + pattern + '" in directory "' + resourceDir + '"');
   }
 
-  return "module.exports = [\n" + files.map(function (file) {
-    this.addDependency(file);
-    return "  require(" + JSON.stringify(file) + ")"
-  }.bind(this)).join(",\n") + "\n];"
+  return "module.exports = {" + files.map(function (file) {
+    var absFile = path.resolve(resourceDir, file);
+    this.addDependency(absFile);
+    return JSON.stringify(file) + ": require(" + JSON.stringify(absFile) + ")"
+  }.bind(this)).join(",\n") + "\n};"
 };
