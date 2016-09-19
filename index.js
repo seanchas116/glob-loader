@@ -4,7 +4,6 @@ var glob = require("glob");
 var path = require("path");
 
 module.exports = function (content, sourceMap) {
-  this.cacheable && this.cacheable();
   var resourceDir = path.dirname(this.resourcePath);
   var pattern = content.trim();
   var files = glob.sync(pattern, {
