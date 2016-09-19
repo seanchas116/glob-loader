@@ -20,5 +20,5 @@ module.exports = function (content, sourceMap) {
 
     var stringifiedFile = JSON.stringify(file);
     return "\t" + stringifiedFile + ": require(" + stringifiedFile + ")";
-  }.bind(this)).join(",\n") + "\n};"
+  }, this).join(",\n") + "\n};"
 };
