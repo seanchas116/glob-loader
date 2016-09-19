@@ -8,7 +8,8 @@ module.exports = function (content, sourceMap) {
   var resourceDir = path.dirname(this.resourcePath);
   var pattern = content.trim();
   var files = glob.sync(pattern, {
-    cwd: resourceDir
+    cwd: resourceDir,
+    realpath: true
   });
 
   if (!files.length) {
@@ -16,6 +17,7 @@ module.exports = function (content, sourceMap) {
   }
 
   return "module.exports = [\n" + files.map(function (file) {
+    this.addDependency(file);
     return "  require(" + JSON.stringify(file) + ")"
-  }).join(",\n") + "\n];"
+  }.bind(this)).join(",\n") + "\n];"
 };
