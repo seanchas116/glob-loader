@@ -15,10 +15,10 @@ module.exports = function (content, sourceMap) {
     this.emitWarning('Did not find anything for glob "' + pattern + '" in directory "' + resourceDir + '"');
   }
 
-  return "module.exports = {" + files.map(function (file) {
+  return "module.exports = {\n" + files.map(function (file) {
     this.addDependency(path.resolve(resourceDir, file));
 
     var stringifiedFile = JSON.stringify(file);
-    return stringifiedFile + ": require(" + stringifiedFile + ")";
+    return "\t" + stringifiedFile + ": require(" + stringifiedFile + ")";
   }.bind(this)).join(",\n") + "\n};"
 };
