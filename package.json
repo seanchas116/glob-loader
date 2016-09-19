@@ -27,8 +27,8 @@
     "glob"
   ],
   "devDependencies": {
-    "tap": "^1.2.0",
     "glob": "^7.0.5",
+    "tap": "^7.1.2",
     "webpack": "^1.9.10"
   }
 }
