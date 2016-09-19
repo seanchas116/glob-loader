@@ -16,8 +16,9 @@ module.exports = function (content, sourceMap) {
   }
 
   return "module.exports = {" + files.map(function (file) {
-    var absFile = path.resolve(resourceDir, file);
-    this.addDependency(absFile);
-    return JSON.stringify(file) + ": require(" + JSON.stringify(absFile) + ")"
+    this.addDependency(path.resolve(resourceDir, file));
+
+    var stringifiedFile = JSON.stringify(file);
+    return stringifiedFile + ": require(" + stringifiedFile + ")";
   }.bind(this)).join(",\n") + "\n};"
 };
